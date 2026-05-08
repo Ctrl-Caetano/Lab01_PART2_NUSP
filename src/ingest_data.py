@@ -34,7 +34,7 @@ def ingest_data(csv_path: str, table_name: str):
     print(f"\n✅ Ingestão completa! {len(df)} linhas em raw.{table_name}")
 
 if __name__ == "__main__":
-    csv_path = r"D:\Python\spotify_data.csv"
+    csv_path = os.getenv('CSV_PATH', r"D:\Python\spotify_data.csv")
     table_name = "spotify_tracks"
     
     ingest_data(csv_path, table_name)

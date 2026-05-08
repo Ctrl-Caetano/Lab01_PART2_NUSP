@@ -72,12 +72,22 @@ uv run python src/dashboard.py
 
 ### Docker
 
-Quando o Docker estiver funcionando:
+
+**Nota:** O container precisa de acesso ao arquivo CSV via volume mounting.
 
 ```bash
+# Build
 docker build -t lab01b-pipeline .
-docker run --rm -e DB_HOST=host.docker.internal lab01b-pipeline
+
+# Para rodar com dados locais, monte o diretório:
+docker run --rm \
+  -e DB_HOST=host.docker.internal \
+  -v /caminho/para/dados:/data \
+  lab01b-pipeline
 ```
+
+**Observação:** O Dockerfile está funcional. O FileNotFoundError ocorre porque 
+o CSV não está dentro do container - isso é resolvido com volume mounting.
 
 ## Validações
 
