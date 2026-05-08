@@ -18,6 +18,7 @@ Lab01_PART2_NUSP/
 │   ├── ingest_data.py       # Faz a ingestão dos dados
 │   ├── data_quality.py      # Valida a qualidade
 │   └── dashboard.py         # Gera os gráficos
+
 ├── docs/
 │   ├── data_quality_report.html
 │   └── dashboard.html
