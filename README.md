@@ -13,17 +13,28 @@ Pipeline de ingestão e validação de dados usando Docker, Python e PostgreSQL.
 O fluxo é simples: dados do CSV vão pro PostgreSQL via Python, depois validamos a qualidade e geramos um dashboard com gráficos.
 
 ## Estrutura
+
+
 Lab01_PART2_NUSP/
 ├── src/
-│   ├── ingest_data.py       # Faz a ingestão dos dados
-│   ├── data_quality.py      # Valida a qualidade
-│   └── dashboard.py         # Gera os gráficos
-
+│   ├── ingest_data.py         # Ingestão dos dados
+│   ├── data_quality.py        # Validação de qualidade
+│   └── dashboard.py           # Gera gráficos
+│
 ├── docs/
 │   ├── data_quality_report.html
 │   └── dashboard.html
+│
+├── data/
+│   ├── raw/
+│   ├── silver/
+│   └── gold/
+│
 ├── Dockerfile
-└── pyproject.toml
+├── pyproject.toml
+├── uv.lock
+└── README.md
+
 
 ## Como rodar
 
