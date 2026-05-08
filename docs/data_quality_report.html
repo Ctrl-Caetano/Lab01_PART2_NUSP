@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Relatório de Qualidade de Dados</title>
+    <style>
+        body { font-family: Arial; margin: 40px; background: #f5f5f5; }
+        .container { background: white; padding: 30px; border-radius: 8px; }
+        h1 { color: #333; }
+        .summary { background: #e8f4f8; padding: 20px; border-radius: 5px; margin: 20px 0; }
+        .validation { margin: 15px 0; padding: 15px; border-left: 4px solid #ddd; }
+        .pass { border-left-color: #4caf50; background: #f1f8f4; }
+        .fail { border-left-color: #f44336; background: #fef1f0; }
+        .status { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Relatório de Qualidade de Dados - Spotify</h1>
+        <div class="summary">
+            <h2>Resumo</h2>
+            <p><strong>Data:</strong> 2026-05-07 20:46:51</p>
+            <p><strong>Total de registros:</strong> 1,159,764</p>
+            <p><strong>Validações:</strong> 5/6 passaram</p>
+            <p><strong>Taxa de sucesso:</strong> 83.3%</p>
+        </div>
+        <h2>Validações</h2>
+
+        <div class="validation pass">
+            <p class="status">1. ✅ PASSOU</p>
+            <p><strong>Regra:</strong> Track ID não pode ser nulo</p>
+            <p><strong>Detalhes:</strong> 0 valores nulos encontrados</p>
+        </div>
+    
+        <div class="validation pass">
+            <p class="status">2. ✅ PASSOU</p>
+            <p><strong>Regra:</strong> Popularidade deve estar entre 0 e 100</p>
+            <p><strong>Detalhes:</strong> 0 valores fora do range</p>
+        </div>
+    
+        <div class="validation pass">
+            <p class="status">3. ✅ PASSOU</p>
+            <p><strong>Regra:</strong> Ano deve ser maior que 1900</p>
+            <p><strong>Detalhes:</strong> 0 valores inválidos</p>
+        </div>
+    
+        <div class="validation pass">
+            <p class="status">4. ✅ PASSOU</p>
+            <p><strong>Regra:</strong> Danceability deve estar entre 0 e 1</p>
+            <p><strong>Detalhes:</strong> 0 valores fora do range</p>
+        </div>
+    
+        <div class="validation pass">
+            <p class="status">5. ✅ PASSOU</p>
+            <p><strong>Regra:</strong> Energy deve estar entre 0 e 1</p>
+            <p><strong>Detalhes:</strong> 0 valores fora do range</p>
+        </div>
+    
+        <div class="validation fail">
+            <p class="status">6. ❌ FALHOU</p>
+            <p><strong>Regra:</strong> Artist name não pode ser nulo</p>
+            <p><strong>Detalhes:</strong> 15 valores nulos</p>
+        </div>
+    
+    </div>
+</body>
+</html>
